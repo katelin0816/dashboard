@@ -9,6 +9,9 @@ footer {
     width: 100%;
     position: fixed;
     bottom: 0;
+    @include max-screen(992px) {
+      position: static;
+    }
     .rank {
         margin: 10px 0 10px 10px;
         padding: 0 10px;
