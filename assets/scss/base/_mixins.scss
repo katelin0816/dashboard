@@ -1,0 +1,115 @@
+/* ------------------------------------------------------------------ */
+/* mixins
+/* ------------------------------------------------------------------ */
+/*box-sizing*/
+@mixin box-sizing {
+-webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+        box-sizing: border-box;
+}
+
+/*transitions animations*/
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+/*border radius*/
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+
+/*Cross browser opacity*/
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+// Border longhand version
+@mixin border-all($width, $style, $color) {
+  border-width: $width;
+  border-style: $style;
+  border-color: $color;
+}
+
+/*rounded style*/
+@mixin rounded($radius) {
+   -webkit-border-radius: $radius;
+   -moz-border-radius: $radius;
+   border-radius: $radius;
+}
+
+/*background-size style*/
+@mixin background-size($bgsize) {
+  -webkit-background-size: $bgsize;
+  -moz-background-size: $bgsize;
+  -o-background-size: $bgsize;
+  background-size: $bgsize;
+}
+
+/*shadow style*/
+@mixin shadow($x, $y, $blur, $color) {
+    -webkit-box-shadow: $x $y $blur $color;
+       -moz-box-shadow: $x $y $blur $color;
+            box-shadow: $x $y $blur $color;
+}
+
+@mixin shadow-inset($x, $y, $blur, $color) {
+    -webkit-box-shadow: inset $x $y $blur $color;
+       -moz-box-shadow: inset $x $y $blur $color;
+            box-shadow: inset $x $y $blur $color;
+}
+
+/*linear-gradient mixin*/
+@mixin linear-gradient($from, $to) {
+    /* Fallback for sad browsers */
+    background-color: $to;
+    /* Mozilla Firefox */
+    background-image:-moz-linear-gradient($from, $to);
+    /* Opera */
+    background-image:-o-linear-gradient($from, $to);
+    /* WebKit (Safari 4+, Chrome 1+) */
+    background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0, $from), color-stop(1, $to));
+    /* WebKit (Chrome 11+) */
+    background-image: -webkit-linear-gradient($from, $to);
+    /* IE10 */
+    background-image: -ms-linear-gradient($from, $to);
+    /* W3C */
+    background-image: linear-gradient($from, $to);
+}
+
+/*Clearfix hack - Works in IE6 and up.*/
+%clearfix {
+  *zoom: 1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+@mixin keyframes($name) {
+     @-webkit-keyframes #{$name}{
+        @content;
+    }
+    @-moz-keyframes #{$name} {
+         @content;
+    }
+    @-ms-keyframes #{$name} {
+         @content;
+    }
+    @keyframes #{$name} {
+         @content;
+    }
+}

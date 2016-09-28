@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+
+    <!--- Basic Page Needs
+   ================================================== -->
+    <meta charset="utf-8">
+    <title>dashboard</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas
+   ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+
+    <!-- Script
+    ================================================== -->
+    <script src="assets/js/modernizr.js"></script>
+
+</head>
+
+<body>
+    <!-- header -->
+    <header class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 col-xs-7">
+                <div class="logo">
+                    <img src="assets/images/logo.svg" alt="logo" width="30" height="30" />
+                    <h1><strong>BUSINESE</strong> Dept.</h1>
+                </div>
+            </div>
+            <nav class="col-md-8 col-xs-5">
+                <ul>
+                    <li>
+                        <a href="#" class="thisPage"><img src="assets/images/icon_chart.svg" alt="chart" width="30" height="30" /></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="assets/images/icon_client.svg" alt="client" width="30" height="30" /></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="assets/images/icon_profile.svg" alt="profile" width="30" height="30" /></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- charts -->
+    <section class="container-fluid main">
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="item">
+                    <div class="title title-gray">
+                        <h1>2016年度業績</h1>
+                    </div>
+                    <canvas id="bar-canvas"></canvas>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="item">
+                    <div class="title title-gray">
+                        <h1>成交客戶年收入</h1>
+                    </div>
+                    <canvas id="line-canvas"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-top">
+            <div class="col-md-12">
+                <div class="item">
+                    <div class="title title-white">
+                        <h1>8月份當月客戶動態</h1>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 client-data">
+                            <h1>15</h1>
+                            <p>體驗客戶數</p>
+                        </div>
+                        <div class="col-md-4 client-data">
+                            <h1>7</h1>
+                            <p>成交客戶數</p>
+                        </div>
+                        <div class="col-md-4 client-data">
+                            <h1>1</h1>
+                            <p>退費客戶數</p>
+                        </div>
+                    </div>
+                    <div class="table-list">
+                        <div class="table">
+                            <div class="row-table header">
+                                <div class="cell hearder">
+                                    客戶編號
+                                </div>
+                                <div class="cell hearder">
+                                    姓名
+                                </div>
+                                <div class="cell hearder">
+                                    是否已成交
+                                </div>
+                                <div class="cell hearder">
+                                    成交金額
+                                </div>
+                                <div class="cell hearder">
+                                    關懷次數
+                                </div>
+                                <div class="cell hearder">
+                                    更多
+                                </div>
+                            </div>
+
+                            <div class="row-table">
+                                <div class="cell list">
+                                    2018374
+                                </div>
+                                <div class="cell list">
+                                    李金看
+                                </div>
+                                <div class="cell list">
+                                    否
+                                </div>
+                                <div class="cell list">
+                                    $0
+                                </div>
+                                <div class="cell list">
+                                    3
+                                </div>
+                                <div class="cell link">
+                                    <a href="#">更多</a>
+                                </div>
+                            </div>
+
+                            <div class="row-table">
+                                <div class="cell list">
+                                    2018374
+                                </div>
+                                <div class="cell list">
+                                    李金看
+                                </div>
+                                <div class="cell list">
+                                    否
+                                </div>
+                                <div class="cell list">
+                                    $0
+                                </div>
+                                <div class="cell list">
+                                    3
+                                </div>
+                                <div class="cell link">
+                                    <a href="#">更多</a>
+                                </div>
+                            </div>
+
+                            <div class="row-table">
+                                <div class="cell list">
+                                    2018374
+                                </div>
+                                <div class="cell list">
+                                    李金看
+                                </div>
+                                <div class="cell list">
+                                    否
+                                </div>
+                                <div class="cell list">
+                                    $0
+                                </div>
+                                <div class="cell list">
+                                    3
+                                </div>
+                                <div class="cell link">
+                                    <a href="#">更多</a>
+                                </div>
+                            </div>
+
+                            <div class="row-table">
+                                <div class="cell list">
+                                    2031763
+                                </div>
+                                <div class="cell list">
+                                    陳語玟
+                                </div>
+                                <div class="cell list">
+                                    否
+                                </div>
+                                <div class="cell list">
+                                    $33,255
+                                </div>
+                                <div class="cell list">
+                                    2
+                                </div>
+                                <div class="cell link">
+                                    <a href="#">更多</a>
+                                </div>
+                            </div>
+
+                            <div class="row-table">
+                                <div class="cell list">
+                                    2031763
+                                </div>
+                                <div class="cell list">
+                                    陳語玟
+                                </div>
+                                <div class="cell list">
+                                    否
+                                </div>
+                                <div class="cell list">
+                                    $33,255
+                                </div>
+                                <div class="cell list">
+                                    2
+                                </div>
+                                <div class="cell link">
+                                    <a href="#">更多</a>
+                                </div>
+                            </div>
+
+                            <div class="row-table">
+                                <div class="cell list">
+                                    2031763
+                                </div>
+                                <div class="cell list">
+                                    陳語玟
+                                </div>
+                                <div class="cell list">
+                                    否
+                                </div>
+                                <div class="cell list">
+                                    $33,255
+                                </div>
+                                <div class="cell list">
+                                    2
+                                </div>
+                                <div class="cell link">
+                                    <a href="#">更多</a>
+                                </div>
+                            </div>
+
+                            <div class="row-table">
+                                <div class="cell list">
+                                    2031763
+                                </div>
+                                <div class="cell list">
+                                    陳語玟
+                                </div>
+                                <div class="cell list">
+                                    否
+                                </div>
+                                <div class="cell list">
+                                    $33,255
+                                </div>
+                                <div class="cell list">
+                                    2
+                                </div>
+                                <div class="cell link">
+                                    <a href="#">更多</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-top">
+            <div class="col-md-6">
+                <div class="item">
+                    <div class="title title-gray">
+                        <h1>2016年度業績</h1>
+                    </div>
+                    <canvas id="pie-canvas"></canvas>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="item">
+                    <div class="title title-gray">
+                        <h1>成交客戶年收入</h1>
+                    </div>
+                    <canvas id="line-s-canvas"></canvas>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row row-top">
+            <div class="col-md-6">
+                <div class="item">
+                    <div class="title title-gray">
+                        <h1>訓練課程</h1>
+                    </div>
+                    <div class="table-list">
+                        <div class="table">
+
+                            <div class="row-table">
+                                <div class="class-cell list-a">
+                                    <h1>VIP高單價產品與合約銷售技巧</h1>
+                                    <p>范直衍 中國區業務總監</p>
+                                </div>
+                                <div class="class-cell list-b">
+                                    <h1>40%</h1>
+                                    <p>課程完成度</p>
+                                </div>
+                                <div class="class-cell link">
+                                    <a href="#">訂課</a>
+                                </div>
+                            </div>
+
+                            <div class="row-table">
+                                <div class="class-cell list-a">
+                                    <h1>潛意識溝通的銷售技巧</h1>
+                                    <p>李佳欣 教授</p>
+                                </div>
+                                <div class="class-cell list-b">
+                                    <h1>40%</h1>
+                                    <p>課程完成度</p>
+                                </div>
+                                <div class="class-cell link">
+                                    <a href="#">訂課</a>
+                                </div>
+                            </div>
+
+                            <div class="row-table">
+                                <div class="class-cell list-a">
+                                    <h1>超級業務訓練班</h1>
+                                    <p>陳乃榮 中國區業務副總</p>
+                                </div>
+                                <div class="class-cell list-b">
+                                    <h1>40%</h1>
+                                    <p>課程完成度</p>
+                                </div>
+                                <div class="class-cell link">
+                                    <a href="#">訂課</a>
+                                </div>
+                            </div>
+
+                            <div class="row-table">
+                                <div class="class-cell list-a">
+                                    <h1>顧問式銷售法與談判技巧</h1>
+                                    <p>黃國昌 教授</p>
+                                </div>
+                                <div class="class-cell list-b">
+                                    <h1>100%</h1>
+                                    <p>課程完成度</p>
+                                </div>
+                                <div class="class-cell link">
+                                    <a href="#">訂課</a>
+                                </div>
+                            </div>
+
+                            <div class="row-table">
+                                <div class="class-cell list-a">
+                                    <h1>基本產品與合約</h1>
+                                    <p>陳乃榮 中國區業務副總</p>
+                                </div>
+                                <div class="class-cell list-b">
+                                    <h1>100%</h1>
+                                    <p>課程完成度</p>
+                                </div>
+                                <div class="class-cell link">
+                                    <a href="#">訂課</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="item">
+                    <div class="title title-gray">
+                        <h1>榮譽獎章</h1>
+                    </div>
+                    <div class="table-list">
+                        <div class="table">
+
+                          <div class="row-table">
+                              <div class="badge-cell list-a">
+                                  <img src="assets/images/badge_5.svg" alt="" />
+                              </div>
+                              <div class="badge-cell list-b">
+                                  <h1>6月寶藍業務之星</h1>
+                                  <p>2015年9月1日</p>
+                              </div>
+                          </div>
+
+                          <div class="row-table">
+                              <div class="badge-cell list-a">
+                                  <img src="assets/images/badge_4.svg" alt="" />
+                              </div>
+                              <div class="badge-cell list-b">
+                                  <h1>年度金牌銷售王</h1>
+                                  <p>2016年9月1日</p>
+                              </div>
+                          </div>
+
+                          <div class="row-table">
+                              <div class="badge-cell list-a">
+                                  <img src="assets/images/badge_3.svg" alt="" />
+                              </div>
+                              <div class="badge-cell list-b">
+                                  <h1>業務技巧講師</h1>
+                                  <p>2015年9月1日</p>
+                              </div>
+                          </div>
+                            <div class="row-table">
+                                <div class="badge-cell list-a">
+                                    <img src="assets/images/badge_2.svg" alt="" />
+                                </div>
+                                <div class="badge-cell list-b">
+                                    <h1>年度卓越獎銅牌</h1>
+                                    <p>2015年9月1日</p>
+                                </div>
+                            </div>
+
+                            <div class="row-table">
+                                <div class="badge-cell list-a">
+                                    <img src="assets/images/badge_1.svg" alt="" />
+                                </div>
+                                <div class="badge-cell list-b">
+                                    <h1>8月金鑽業務之星</h1>
+                                    <p>2015年9月1日</p>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </section>
+
+    <!-- footer -->
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="rank rank-a">
+                <h1>1200,714<img src="assets/images/arrow_up.svg" alt="arrow" width="12" height="24" /></h1>
+                <p>本週成交總額</p>
+            </div>
+            <div class="rank rank-b">
+                <h1>14<img src="assets/images/arrow_down.svg" alt="arrow" width="12" height="24" /></h1>
+                <p>本週成交客戶總數</p>
+            </div>
+            <div class="rank rank-c">
+                <h1>1<img src="assets/images/arrow_down.svg" alt="arrow" width="12" height="24" /></h1>
+                <p>本週退費客戶總數</p>
+            </div>
+            <div class="rank rank-d">
+                <h1>No.18<img src="assets/images/arrow_up.svg" alt="arrow" width="12" height="24" /></h1>
+                <p>在216位業務員中的業績排名</p>
+            </div>
+            <div class="rank-inline">
+                <div class="rank rank-e">
+                    <h1>90%</h1>
+                    <p>本週業績達標率</p>
+                </div>
+                <div class="achievemen">
+                    123
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="assets/js/jquery-1.10.2.min.js"><\/script>')
+    </script>
+    <script src="assets/js/Chart.bundle.js"></script>
+    <script src="assets/js/jquery.animateNumber.min.js"></script>
+    <script src="assets/js/customize.js"></script>
+
+
+
+</body>
+
+</html>

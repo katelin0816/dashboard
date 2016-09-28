@@ -1,0 +1,63 @@
+/* ------------------------------------------------------------------ */
+/* footer
+/* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ */
+/* footer
+/* ------------------------------------------------------------------ */
+footer {
+    background: #302b4b;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    .rank {
+        margin: 10px 0 10px 10px;
+        padding: 0 10px;
+        display: inline-block;
+        h1 {
+            color: $color-complement;
+            font-size: 2em;
+            line-height: 1.3;
+            display: inline-block;
+            vertical-align: middle;
+            @include max-screen(768px) {
+                font-size: 1.5em;
+            }
+            img {
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 8px;
+            }
+        }
+        p {
+            color: $color-complement;
+            font-size: 0.8em;
+            opacity: 0.5;
+            margin: 0;
+        }
+    }
+    .rank-a {
+        border-left: 2px solid #f76f7d;
+    }
+    .rank-b {
+        border-left: 2px solid #1bd2e8;
+    }
+    .rank-c {
+        border-left: 2px solid #18a695;
+    }
+    .rank-d {
+        border-left: 2px solid #a873ef;
+    }
+    .rank-e {
+        border-left: 2px solid #e8567e;
+    }
+    .rank-inline{
+      display: inline-block;
+      float: right;
+    }
+    .achievemen {
+        background: #393559;
+        margin: 10px;
+        height: auto;
+        display: inline-block;
+    }
+}

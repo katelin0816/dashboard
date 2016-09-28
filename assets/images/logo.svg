@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39 (31667) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M22.1210473,22.263183 C19.774363,24.5740824 16.553702,26 13,26 L13,13.1421356 L22.1210473,22.263183 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(13.000000, 13.000000) rotate(211.000000) translate(-13.000000, -13.000000) ">
+            <g id="overview">
+                <circle id="oval" fill="#202147" cx="13" cy="13" r="13"></circle>
+                <path d="M22.1481269,3.76356136 C24.5266611,6.11949512 26,9.38768919 26,13 C26,20.1797017 20.1797017,26 13,26 L13,12.9116882 L22.1481269,3.76356136 Z" id="Combined-Shape" fill="#7CD8FF"></path>
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Combined-Shape" fill="#D19EE8" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

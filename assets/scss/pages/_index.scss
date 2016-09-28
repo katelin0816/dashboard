@@ -1,0 +1,197 @@
+/* ------------------------------------------------------------------ */
+/* index
+/* ------------------------------------------------------------------ */
+.main {
+    margin-bottom: 100px;
+}
+.row-top {
+    margin-top: 30px;
+}
+.item {
+    background: #FFFFFF;
+    -webkit-box-shadow: 0 0 5px 5px #eff1f5;
+    -moz-box-shadow: 0 0 5px 5px #eff1f5;
+    box-shadow: 0 0 5px 5px #eff1f5;
+}
+.title {
+    width: 100%;
+    h1 {
+        color: $color-primary;
+        font-size: 1em;
+        opacity: 0.5;
+    }
+}
+.title-white {
+    background-color: $color-complement;
+    padding: 10px;
+}
+.title-gray {
+    background-color: #f9f9fc;
+    padding: 10px;
+}
+.client-data {
+    text-align: center;
+    background: #f8f9fb;
+    border-right: 1px solid #dbe6f0;
+    padding: 15px 0;
+    border-top: 1px solid #dbe6f0;
+    border-bottom: 1px solid #dbe6f0;
+    &:last-child{
+      border-right: none;
+    }
+    h1 {
+        color: #1ad0ff;
+        font-size: 3em;
+        line-height: 1;
+    }
+    p {
+        color: $color-primary;
+        font-size: 1em;
+        margin-top: 10px;
+    }
+}
+.table-list {
+    margin: 0 auto;
+    font-family: $font-sans;
+    .table {
+        width: 100%;
+        display: table;
+        @include max-screen(580px) {
+            display: block;
+        }
+    }
+    .row-table {
+        display: table-row;
+        background: $color-complement;
+        &:nth-of-type(odd) {
+            background: $color-complement;
+        }
+        &.header {
+            font-weight: 800;
+            background: $color-complement;
+            &:hover {
+                background: $color-complement;
+            }
+        }
+        @include max-screen(580px) {
+            padding: 8px 0;
+            display: block;
+        }
+        &:hover {
+            background: rgba(26,208,255,0.05);
+        }
+
+    }
+    .cell {
+        padding: 6px 12px;
+        display: table-cell;
+        text-align: center;
+        color: $color-primary;
+        &.hearder {
+            border-bottom: 1px solid #e6e8ed;
+        }
+        &.list {
+            border-bottom: 1px dashed #e6e8ed;
+        }
+        a {
+            padding: 3px 10px;
+            color: #302b4b;
+            border: 1px solid #e6e8ed;
+            @include border-radius(3px);
+            &:hover {
+                background: #302b4b;
+                border: 1px solid #302b4b;
+                color: $color-complement;
+                opacity: 1;
+            }
+        }
+        &.link {
+            border-bottom: 1px dashed #e6e8ed;
+        }
+        @include max-screen(580px) {
+            padding: 2px 12px;
+            display: block;
+        }
+    }
+    .class-cell {
+        padding: 6px 12px;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: left;
+        color: $color-primary;
+        border-right: 1px dashed #e6e8ed;
+        &:last-child {
+            border-right: none;
+        }
+        h1 {
+            font-size: 1.3em;
+        }
+        p {
+            font-size: 0.8em;
+            opacity: 0.5;
+        }
+        &.list-a {
+            border-bottom: 1px dashed #e6e8ed;
+            width: 65%;
+        }
+        &.list-b {
+            border-bottom: 1px dashed #e6e8ed;
+            width: 20%;
+        }
+        a {
+            padding: 5px 10px;
+            color: #302b4b;
+            border: 1px solid #e6e8ed;
+            @include border-radius(3px);
+            &:hover {
+                background: #302b4b;
+                border: 1px solid #302b4b;
+                color: $color-complement;
+            }
+        }
+        &.link {
+            border-bottom: 1px dashed #e6e8ed;
+            width: 15%;
+        }
+        @include max-screen(580px) {
+            padding: 2px 12px;
+            display: block;
+        }
+    }
+    .badge-cell {
+        padding: 6px 12px;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: right;
+        color: $color-primary;
+        border-right: 1px dashed #e6e8ed;
+        &:last-child {
+            border-right: none;
+        }
+        h1 {
+            font-size: 1.3em;
+        }
+        p {
+            font-size: 0.8em;
+            opacity: 0.5;
+        }
+        &.list-a {
+            border-bottom: 1px dashed #e6e8ed;
+            width: 15%;
+        }
+        &.list-b {
+            border-bottom: 1px dashed #e6e8ed;
+            width: 85%;
+        }
+        @include max-screen(580px) {
+            padding: 2px 12px;
+            display: block;
+        }
+    }
+}
+canvas {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    padding: 10px 15px;
+}
