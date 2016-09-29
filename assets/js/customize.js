@@ -5,17 +5,7 @@
 $(document).ready(function() {
 
 
-    $('.client-data h1').each(function() {
-        $(this).prop('Counter', 0).animate({
-            Counter: $(this).text()
-        }, {
-            duration: 1000,
-            easing: 'swing',
-            step: function(now) {
-                $(this).text(Math.ceil(now));
-            }
-        });
-    });
+
 
 
 
@@ -254,7 +244,7 @@ $(document).ready(function() {
         options: {
             responsive: true,
             legend: { //修改lable
-              display:false,
+                display: false,
                 position: 'right', //lable位置
                 labels: { //lable屬性
                     usePointStyle: true, //是否要修改 point的style
@@ -283,6 +273,27 @@ $(document).ready(function() {
 
 
     };
+
+
+    if (screen.width > 960) {
+        document.getElementById("bar-canvas").height = 271;
+        document.getElementById("line-canvas").height = 130;
+    } else {
+        alert('More than 960');
+    }
+
+    $('.client-data h1').each(function() {
+        $(this).prop('Counter', 0).animate({
+            Counter: $(this).text()
+        }, {
+            duration: 1000,
+            easing: 'swing',
+            step: function(now) {
+                $(this).text(Math.ceil(now));
+            }
+        });
+    });
+
 
 
 

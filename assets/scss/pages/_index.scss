@@ -132,11 +132,9 @@
         }
         &.list-a {
             border-bottom: 1px dashed #e6e8ed;
-            width: 65%;
         }
         &.list-b {
             border-bottom: 1px dashed #e6e8ed;
-            width: 20%;
         }
         a {
             padding: 5px 10px;
@@ -151,7 +149,6 @@
         }
         &.link {
             border-bottom: 1px dashed #e6e8ed;
-            width: 15%;
         }
         @include max-screen(580px) {
             padding: 2px 12px;
@@ -177,11 +174,9 @@
         }
         &.list-a {
             border-bottom: 1px dashed #e6e8ed;
-            width: 15%;
         }
         &.list-b {
             border-bottom: 1px dashed #e6e8ed;
-            width: 85%;
         }
         @include max-screen(580px) {
             padding: 2px 12px;
@@ -193,5 +188,5 @@ canvas {
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
-    padding: 10px 15px;
+    padding: 8px 13px;
 }

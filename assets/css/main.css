@@ -2833,12 +2833,10 @@ footer .achievemen {
 
 .table-list .class-cell.list-a {
   border-bottom: 1px dashed #e6e8ed;
-  width: 65%;
 }
 
 .table-list .class-cell.list-b {
   border-bottom: 1px dashed #e6e8ed;
-  width: 20%;
 }
 
 .table-list .class-cell a {
@@ -2859,7 +2857,6 @@ footer .achievemen {
 
 .table-list .class-cell.link {
   border-bottom: 1px dashed #e6e8ed;
-  width: 15%;
 }
 
 @media screen and (max-width: 580px) {
@@ -2893,12 +2890,10 @@ footer .achievemen {
 
 .table-list .badge-cell.list-a {
   border-bottom: 1px dashed #e6e8ed;
-  width: 15%;
 }
 
 .table-list .badge-cell.list-b {
   border-bottom: 1px dashed #e6e8ed;
-  width: 85%;
 }
 
 @media screen and (max-width: 580px) {
@@ -2912,5 +2907,5 @@ canvas {
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  padding: 10px 15px;
+  padding: 8px 13px;
 }
