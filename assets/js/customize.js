@@ -18,25 +18,22 @@ $(document).ready(function() {
     var barChartData = {
         type: 'bar',
         data: {
-            labels: ["January", "February", "March", "April", "May", "June", "July"],
+            labels: ["January"],
             datasets: [{
-                label: '預約數',
-                backgroundColor: "rgba(242,244,248,1)",
+                label: '平均成交數',
+                backgroundColor: "rgba(26,208,255,0.5)",
                 borderWidth: 0,
-                yAxisID: "y-axis-1",
-                data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
+                data: [randomScalingFactor()]
             }, {
-                label: '體驗數',
-                backgroundColor: "rgba(26,209,255,0.5)",
+                label: '我的成交數',
+                backgroundColor: "rgba(210,156,234,0.5)",
                 borderWidth: 0,
-                yAxisID: "y-axis-2",
-                data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
+                data: [randomScalingFactor()]
             }, {
-                label: '成交數',
-                backgroundColor: "rgba(159,108,204,0.5)",
+                label: '我的成交數',
+                backgroundColor: "rgba(31,31,72,0.5)",
                 borderWidth: 0,
-                yAxisID: "y-axis-1",
-                data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
+                data: [randomScalingFactor()]
             }]
         },
         options: {
@@ -48,6 +45,7 @@ $(document).ready(function() {
                 backgroundColor: 'rgba(37,39,76,0.8)',
             },
             legend: {
+                display: false,
                 labels: {
                     usePointStyle: true,
                     pointStyle: 'circle',
@@ -58,29 +56,17 @@ $(document).ready(function() {
             },
             scales: {
                 xAxes: [{
-                    display: true,
+                  tickThickness: 0,
+                  gridLines: { //網格線設定
+                      zeroLineColor: 'rgba(37,39,76,0.1)'
+                  }
 
                 }],
                 yAxes: [{
-                    type: "linear", // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
-                    display: true,
-                    position: "left",
-                    id: "y-axis-1",
                     gridLines: { //網格線設定
-                        color: 'rgba(37,39,76,0.1)',
                         zeroLineColor: 'rgba(37,39,76,0.1)'
                     }
-                }, {
-                    type: "linear", // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
-                    display: false,
-                    position: "right",
-                    id: "y-axis-2",
-                    gridLines: {
-                        drawOnChartArea: false,
-                        color: 'rgba(37,39,76,0.1)',
-                        zeroLineColor: 'rgba(37,39,76,0.1)'
-                    }
-                }],
+                }]
             }
         }
     };
@@ -96,17 +82,29 @@ $(document).ready(function() {
                 label: "平均成交數",
                 data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()],
                 fill: false,
-                backgroundColor: 'rgba(255,255,255,1)',
+                pointBackgroundColor: 'rgba(255,255,255,1)',
+                pointHoverBackgroundColor: "rgba(255,255,255,1)",
+                pointHoverBorderWidth: 4,
+                borderWidth: 2,
+                borderDash: [3, 3],
+                borderColor: "rgba(31,31,72,1)",
+                lineTension: 0
+            }, {
+                label: "目標成交數",
+                data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()],
+                backgroundColor: 'rgba(26,208,255,0.2)',
                 pointBackgroundColor: 'rgba(255,255,255,1)',
                 borderWidth: 1,
-                borderDash: [3, 3],
-                borderColor: 'rgba(159,108,204,0.5)'
+                borderColor: 'rgba(26,208,255,1)',
+                lineTension: 0.3
             }, {
                 label: "我的成交數",
                 data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()],
-                backgroundColor: 'rgba(26,209,255,0.3)',
+                backgroundColor: 'rgba(210,156,234,0.1)',
+                pointBackgroundColor: 'rgba(255,255,255,1)',
                 borderWidth: 1,
-                borderColor: 'rgba(26,209,255,0.5)'
+                borderColor: 'rgba(210,156,234,1)',
+                lineTension: 0.3
             }]
         },
         options: {
@@ -115,6 +113,7 @@ $(document).ready(function() {
                 backgroundColor: 'rgba(37,39,76,0.8)',
             },
             legend: {
+                display: false,
                 labels: {
                     usePointStyle: true,
                     pointStyle: 'circle',
@@ -185,6 +184,7 @@ $(document).ready(function() {
                 backgroundColor: 'rgba(37,39,76,0.8)',
             },
             legend: {
+                display: false,
                 labels: {
                     usePointStyle: true,
                     pointStyle: 'circle',
@@ -243,6 +243,9 @@ $(document).ready(function() {
         },
         options: {
             responsive: true,
+            tooltips: {
+                backgroundColor: 'rgba(37,39,76,0.8)',
+            },
             legend: { //修改lable
                 display: false,
                 position: 'right', //lable位置
@@ -278,6 +281,8 @@ $(document).ready(function() {
     if (screen.width > 960) {
         document.getElementById("bar-canvas").height = 271;
         document.getElementById("line-canvas").height = 130;
+        document.getElementById("pie-canvas").height = 271;
+        document.getElementById("line-s-canvas").height = 130;
     } else {
         alert('More than 960');
     }

@@ -4,11 +4,12 @@
 /* ------------------------------------------------------------------ */
 /* Color & Theming
 /* ------------------------------------------------------------------ */
-/*GRAY*/
 /*DEEP BLUE*/
+/*light BLUE*/
 /*PURPLE*/
-/*LIGHT GRAY*/
-/*GRAY*/
+/*White*/
+/*light gray*/
+/**/
 /* ------------------------------------------------------------------
 /* Reset
    Adapted from: Normalize.css and HTML5 Doctor Reset
@@ -2698,7 +2699,7 @@ footer .achievemen {
 
 .client-data {
   text-align: center;
-  background: #f8f9fb;
+  background: #f9f9fc;
   border-right: 1px solid #dbe6f0;
   padding: 15px 0;
   border-top: 1px solid #dbe6f0;
@@ -2710,7 +2711,7 @@ footer .achievemen {
 }
 
 .client-data h1 {
-  color: #1ad0ff;
+  color: #5776fe;
   font-size: 3em;
   line-height: 1;
 }
@@ -2839,22 +2840,6 @@ footer .achievemen {
   border-bottom: 1px dashed #e6e8ed;
 }
 
-.table-list .class-cell a {
-  padding: 5px 10px;
-  color: #302b4b;
-  border: 1px solid #e6e8ed;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  border-radius: 3px;
-}
-
-.table-list .class-cell a:hover {
-  background: #302b4b;
-  border: 1px solid #302b4b;
-  color: #ffffff;
-}
-
 .table-list .class-cell.link {
   border-bottom: 1px dashed #e6e8ed;
 }
@@ -2903,9 +2888,13 @@ footer .achievemen {
   }
 }
 
-canvas {
+.c-box {
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.c-box canvas {
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  padding: 8px 13px;
 }
